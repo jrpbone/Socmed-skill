@@ -5,12 +5,12 @@
 <h1 align="center">Socmed Skill</h1>
 
 <p align="center">
-  A voice-first social-media system with 17 production-ready workflows for Codex.
+  A voice-first social-media system with 18 production-ready workflows for Codex.
 </p>
 
 <p align="center">
   <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-111827" alt="MIT License"></a>
-  <img src="https://img.shields.io/badge/workflows-17-FF5A5F" alt="17 workflows">
+  <img src="https://img.shields.io/badge/workflows-18-FF5A5F" alt="18 workflows">
   <img src="https://img.shields.io/badge/built%20for-Codex-111827" alt="Built for Codex">
   <img src="https://img.shields.io/badge/forked%20from-Claude-D97757" alt="Forked from Claude">
 </p>
@@ -74,6 +74,7 @@ Codex discovers the workflows automatically from `.agents/skills/`. Your generat
 | [`carousel-designer`](.agents/skills/carousel-designer/SKILL.md) | Designs a branded, slide-by-slide LinkedIn carousel. |
 | [`quote-post`](.agents/skills/quote-post/SKILL.md) | Develops an original quote and its finished visual treatment. |
 | [`whiteboard-infographic`](.agents/skills/whiteboard-infographic/SKILL.md) | Turns source material into a hand-drawn whiteboard infographic. |
+| [`editorial-infographics`](.agents/skills/editorial-infographics/SKILL.md) | Creates evidence-led editorial graphics with topology-aware layouts and an anti-slop quality gate. |
 | [`youtube-thumbnail`](.agents/skills/youtube-thumbnail/SKILL.md) | Produces a branded video thumbnail from a title and creator reference. |
 
 ### Video
@@ -91,7 +92,7 @@ $niche-research → $content-matrix
       ↓
 $post-writer → $post-scorer
       ↓
-$graphic-designer / $carousel-designer / $whiteboard-infographic
+$graphic-designer / $carousel-designer / $whiteboard-infographic / $editorial-infographics
 ```
 
 Start with voice once. Then reuse that context across ideation, writing, review, and design.
@@ -100,7 +101,7 @@ Start with voice once. Then reuse that context across ideation, writing, review,
 
 ```text
 .
-├── .agents/skills/      # The 17 reusable Codex workflows
+├── .agents/skills/      # The 18 reusable Codex workflows
 ├── assets/              # GitHub and plugin branding
 ├── posts/               # Local content output (ignored)
 ├── about-me.md          # Generated personal context (ignored)
@@ -126,6 +127,8 @@ This fork updates the original workflows for the Codex environment:
 Socmed Skill is a Codex adaptation of Charlie Hills' [`social-media-skills`](https://github.com/charlie947/social-media-skills), originally built for Claude. This fork is adapted and maintained by **jrpbone**.
 
 The upstream MIT licence and copyright notice are preserved in [LICENSE](LICENSE).
+
+The [`editorial-infographics`](.agents/skills/editorial-infographics/SKILL.md) workflow is adapted from DÍA UNO's [`agent-infographic-skill`](https://github.com/aosoficial/agent-infographic-skill). Its MIT licence and copyright notice are preserved in the [skill directory](.agents/skills/editorial-infographics/LICENSE).
 
 ## Licence
 

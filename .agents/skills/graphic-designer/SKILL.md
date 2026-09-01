@@ -16,6 +16,8 @@ Check the project for the most recent post file. If found, read it. If not, say:
 
 > Paste the post you want a graphic for.
 
+If `brand-guidelines.md` exists in the project, read it before designing and apply its approved assets, colours, placement rules, and safe margins.
+
 Wait for the post, then ask the following question in chat. Use an interactive input control only when available:
 
 ```json
@@ -47,6 +49,7 @@ Design constraints:
 - 40px minimum padding on all sides
 - No stock photo backgrounds
 - Let the post content dictate how many sections the graphic has. 3 steps = 3 blocks. 10 tips = 10 blocks. The constraint is legibility, not a fixed number. Every element must be large enough to read on a mobile screen.
+- Apply the project's brand signature. For Code to the Bone, use the approved flat logo as a small bottom-right signature within the specified safe margin. Do not redraw or restyle it.
 
 Single self-contained HTML file with inline CSS. Include viewport meta tag.
 
@@ -125,7 +128,7 @@ FOOTER:
 Keep text large and scannable. Maximum 40 words on the entire image. No decorative borders. No watermarks. No logos unless the user provides one.
 ```
 
-If image generation is available, generate the image directly from the completed prompt and return the result. Otherwise output the provider-neutral prompt in a code block for use with an image generator.
+If image generation is available, generate the image directly from the completed prompt. Then composite any project-approved logo deterministically as the final step, using its required small bottom-right placement. Do not ask the image model to reproduce the logo. Otherwise output the provider-neutral prompt in a code block for use with an image generator.
 
 ## After either path
 
@@ -141,5 +144,6 @@ Say:
 - Extract and distil the post content into the graphic. No copying the full post text.
 - Whiteboard style: always hand-drawn marker look, imperfect lines, coloured pens, notebook/whiteboard texture.
 - Branded style: always clean, flat, modern, using the user's brand colours.
+- Always follow `brand-guidelines.md` when it exists. The Code to the Bone default is a small approved logo at the bottom right of every post graphic.
 - Never use em dashes in any output.
 - British English throughout.
